@@ -4,71 +4,98 @@
     <title>Elastic Beanstalk</title>
     <style>
       body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        background: linear-gradient(to right, #1e3c72, #2a5298);
         color: #ffffff;
-        font-family: Arial, sans-serif;
-        font-size:14px;
-        -moz-transition-property: text-shadow;
-        -moz-transition-duration: 4s;
-        -webkit-transition-property: text-shadow;
-        -webkit-transition-duration: 4s;
-        text-shadow: none;
+        display: flex;
+        height: 100vh;
       }
-      body.blurry {
-        -moz-transition-property: text-shadow;
-        -moz-transition-duration: 4s;
-        -webkit-transition-property: text-shadow;
-        -webkit-transition-duration: 4s;
-        text-shadow: #fff 0px 0px 25px;
-      }
-      a {
-        color: #55aaff;
-      }
+
       .textColumn, .linksColumn {
         padding: 2em;
+        box-sizing: border-box;
       }
+
       .textColumn {
-        position: absolute;
-        top: 0px;
-        right: 50%;
-        bottom: 0px;
-        left: 0px;
-
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
         text-align: right;
-        padding-top: 11em;
-        background-color: DodgerBlue;
-
+        background: linear-gradient(to bottom right, #007BFF, #00C6FF);
+        color: white;
+        padding-right: 4em;
       }
+
+      .textColumn h1 {
+        font-size: 4em;
+        margin: 0 0 0.5em 0;
+        font-weight: 700;
+      }
+
       .textColumn p {
-        width: 75%;
-        float:right;
+        font-size: 1.2em;
+        max-width: 500px;
+        line-height: 1.6;
       }
+
       .linksColumn {
-        position: absolute;
-        top:0px;
-        right: 0px;
-        bottom: 0px;
-        left: 50%;
-
-        background-color: #33342D;
+        flex: 1;
+        background: #1c1c1c;
+        color: #ccc;
+        padding-left: 4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
-      h1 {
-        color: #33342D;
-        font-size: 500%;
-        font-weight: normal;
-        margin-bottom: 0em;
+      .linksColumn h2 {
+        font-size: 2em;
+        margin-bottom: 1em;
+        color: #ffffff;
       }
-      h2 {
-        font-size: 200%;
-        font-weight: normal;
-        margin-bottom: 0em;
-      }
+
       ul {
-        padding-left: 1em;
-        margin: 0px;
+        list-style: none;
+        padding: 0;
       }
+
       li {
-        margin: 1em 0em;
+        margin-bottom: 1em;
+      }
+
+      a {
+        color: #55aaff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #ffffff;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+
+        .textColumn, .linksColumn {
+          align-items: center;
+          text-align: center;
+          padding: 2em;
+        }
+
+        .textColumn {
+          padding-right: 2em;
+        }
+
+        .linksColumn {
+          padding-left: 2em;
+        }
       }
     </style>
   </head>
@@ -83,9 +110,9 @@
         <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html">AWS Elastic Beanstalk overview</a></li>
         <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.html">AWS Elastic Beanstalk concepts</a></li>
         <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express.html">Deploy an Express Application to AWS Elastic Beanstalk</a></li>
-        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express_elasticache.html">Deploy an Express Application with Amazon ElastiCache to AWS Elastic Beanstalk</a></li>
-        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_geddy_elasticache.html">Deploy a Geddy Application with Amazon ElastiCache to AWS Elastic Beanstalk </a></li>
-        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_custom_container.html">Customizing and Configuring a Node.js Container </a></li>
+        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_express_elasticache.html">Deploy an Express Application with Amazon ElastiCache</a></li>
+        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_geddy_elasticache.html">Deploy a Geddy Application with Amazon ElastiCache</a></li>
+        <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs_custom_container.html">Customizing and Configuring a Node.js Container</a></li>
         <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.loggingS3.title.html">Working with Logs</a></li>
       </ul>
     </div>
